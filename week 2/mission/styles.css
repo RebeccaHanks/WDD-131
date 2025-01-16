@@ -9,11 +9,13 @@ header{
 .title > h1 {
     font-size: 45px;
     letter-spacing: 5px;
+    font-weight: 175;
 }
 .title > h2 {
     color: #006EB6;
     font-size: 20px;
     letter-spacing: 3px;
+    font-weight: 300;
 }
 
 /*.title > hr {
