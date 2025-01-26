@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: purple;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: black;
+--text-light: white;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
+
+
+body {
+    max-width: 480px;
+    margin: 1rem auto; /* max-width and margin make everything centered! */
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+a:link,
+a:visited {
+  color: var(--accent-color);
+}
+
+header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;;
+}
+#title {
+    font-size: 50px;
+}
+button {
+    background-color: purple;
+    color: white;
+    border:none;
+    font-size: 33px;
+}
+.links {
+    text-decoration: underline;
+}
+.hide {
+    display:none;
+}
+
+
+main {
+    background-color: #F0F0F0;
+    text-align: center;
+    padding: 15px;
+}
+
+img {
+	max-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit:cover;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px;
+}
+figure {
+    padding: 4px;
+}
+
+
+footer {
+    background-color: purple;
+    padding: 10px;
+}
+
+
+/*FOR THE VIEWER*/
+
+.viewer {
+    position: fixed; /* Make it stay in one place relative to the viewport */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent grey background */
+    display: grid; /* Use grid for layout */
+    grid-template-rows: auto 1fr; /* Two rows: one for the button, one for the image */
+    justify-items: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    z-index: 10; /* Ensure it stays above other content */
+    color: Black; /* Font color for the X button */
+  }
+  
+  .viewer img {
+    max-width: 100%; /* Ensure the image fits within the width of the viewer */
+    max-height: 100%; /* Prevent the image from becoming too tall */
+    object-fit: contain; /* Preserve aspect ratio */
+  }
+  
+  .close-viewer {
+    background: none; /* Remove default button styling */
+    border: none; /* Remove border */
+    font-size: 2rem; /* Make the X button larger */
+    color: white; /* Match the text color with the viewer */
+    cursor: pointer; /* Indicate clickable behavior */
+    align-self: start; /* Align the button to the top */
+    justify-self: end; /* Align the button to the right */
+    padding: 10px; /* Add some spacing around the button */
+    z-index: 20; /* Ensure it stays above the image */
+  }
+  .viewer.active {
+    visibility: visible; /* Show the modal */
+  }  
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+    body {
+        max-width: 10000px;
+    }
+    .gallery {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body{
+        margin: 0 auto; /* max-width and margin make everything centered! */
+        padding: 0 20px; 
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    button {
+        display: none;
+    }
+    .links {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .viewer {
+        padding: 30px;
+    }
+}
+
+
