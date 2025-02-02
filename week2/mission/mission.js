@@ -7,8 +7,8 @@ function changeTheme() {
     const body = document.body;
     const logo = document.querySelector('footer img');
 
-    if (currentValue = 'dark') {
-        body.classList.add('.dark');
+    if (currentValue ==='dark') {
+        body.classList.add('dark');
         logo.src = 'byui-logo_white.png';
     }
     else {
