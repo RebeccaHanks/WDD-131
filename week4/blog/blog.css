@@ -36,6 +36,7 @@ nav {
 #info-one, #info-two{
     justify-items: end;
     padding-right: 40px;
+    padding-left: 30px;
     line-height: 13px;
     font-weight: normal;
     font-size: 15px;
@@ -43,18 +44,21 @@ nav {
     border-collapse: separate;
     border-spacing: 15px;
     padding-top: 10px;
+    grid-column: 1/2;
 }
 #book-1, #book-2{
     padding-left: 10px;
     padding-bottom: 20px;
+    grid-column: 2/3;
 }
 #filters{
     border: 1px solid #EFC69B;
+    min-width: 450px;
+    /* grid-column: 3/4; */
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     margin-top: 30px;
 }
 
@@ -62,6 +66,11 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 

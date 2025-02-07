@@ -1,0 +1,73 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html" method="get">
+       <p> 
+            <label for="name">Name:</label>
+        </p>
+        <p>
+            <input type="text" id="name" name="name" required />
+        </p>
+        <p>
+            <label for="email">Email:</label>
+        </p>
+        <p>
+            <input type="email" name="email" id="email" placeholder="Enter email here" required/>
+        </p>
+        <p>
+            <label for="address">Address:</label>
+        </p>
+        <p>
+            <input type="text" id="address" name="address" required>
+        </p>
+        <p>
+            <label for="payment-method">Payment Method:</label>
+        </p>
+        <select name="payment-method" id="payment-method">
+            <option value="" required>Choose One</option>
+            <option value="card">Credit/Debit</option>
+            <option value="paypal">Paypal</option>
+        </select>
+        <p class="hide", class="creditContainer">
+            <label for="credit">Credit Card Number:</label>
+        </p>
+        <p class="hide", class="creditContainer">
+            <input type="text" id="credit" name="credit" pattern="[0-9]{16}" required>
+        </p>
+        <p class="hide", class="paypalContainer">
+            <label for="paypal">PayPal User Name:</label>
+        </p>
+        <p class="hide", class="paypalContainer">
+            <input type="text" id="paypal" name="paypal" required>
+        </p>
+        <p>
+            <label for="newsletter">Sign up for newsletter</label>
+            <input type="checkbox" id="newsletter" name="newsletter" /> <!--use radio to choose between options-->
+        </p>
+            <fieldset>
+                <legend>Interests</legend>
+        <p>
+            <label for="games">Games</label>
+            <input type="checkbox" id="games" name="interests" /> 
+        </p>
+        <p>
+            <label for="comics">Comics</label>
+            <input type="checkbox" id="comics" name="interests" />
+            </p>
+        </fieldset>
+        <button type="sumbit">Submit</button>
+    </form>
+    </main>
+  </body>
+</html>

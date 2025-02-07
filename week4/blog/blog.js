@@ -9,7 +9,9 @@ const articles = [
 		imgAlt: 'Book cover for Septimus Heap 1',
 		ages: '10-14',
 		genre: 'Fantasy',
-		stars: '****'
+		stars: '****',
+		cssInfo: 'info-one',
+		cssBook: 'book-1'
 	},
 	{
 		id: 2,
@@ -22,17 +24,42 @@ const articles = [
 		imgAlt: 'Book cover for Magnus Chase 1',
 		ages: '12-16',
 		genre: 'Fantasy',
-		stars: '⭐⭐⭐⭐'
+		stars: '⭐⭐⭐⭐',
+		cssInfo: 'info-two',
+		cssBook: 'book-2'
+		
 	}
 ]
 
-const articlesContainer = document.querySelector('#articles-container')
 
 function showArticles(){
+	const articlesContainer = document.querySelector('#articles-container');
 	articles.forEach((article) => {
 		const articleElement = document.createElement("article");
 
 		const articleHTML = `
+		<section id="${article.cssInfo}">
+            <h2>${article.date}</h2>
+            <h3>${article.ages}</h3>
+            <h3>${article.genre}</h3>
+            <h3>${article.stars}</h3>
+        </section>
+        <section id="${article.cssBook}}">
+            <h1>${article.title}</h1>
+            <img src="${article.imgSrc}" alt="${article.imgAlt}">
+            <p>${article.description}</p>
+        </section>
+
 		`
+articleElement.innerHTML = articleHTML;
+articlesContainer.appendChild(articleElement);
+
+
+
 	})
+
 }
+
+showArticles()
+
+// use set attribute to add all classes
