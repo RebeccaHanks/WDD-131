@@ -1,0 +1,78 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 70px 1fr 70px; /* Define grid columns */
+    grid-template-rows: 20px 1fr 20px 20px; /* Define grid rows */
+    gap: 10px; /* Add spacing between the elements */
+    width: 400px; /* Set the container width */
+    height: 250px; /* Set the container height */
+    margin: 50px auto; /* Center container on the page */
+}
+
+#front-card {
+    /* border: 1px solid black; */
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 15px;
+    width: 380px;
+    height: 190px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    grid-column: 1 / 4; /* Spans across all columns */
+    grid-row: 1 / 3; /* Covers the top part */
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+p {
+    margin: 1px 0;
+}
+#card-holder {
+    width: 140px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: end;
+}
+.cardHolder {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+}
+#card-exp {
+    width:25px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: end;
+}
+.expiration {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: start;
+}
+
+/* Back card styling */
+#back-card {
+    grid-column: 2 / 4; /* Starts after the first column */
+    grid-row: 2 / 4; /* Covers the bottom rows */
+    z-index: 1;
+    position: relative;
+    transform: translate(20px, 20px); /* Offset to create overlapping effect */
+    z-index: 1; /* Place below the front card */
+}
+
+/* Front card styling */
+#front-card {
+    z-index: 2; /* Place above the back card */
+}
+#back-card {
+    background-color: lightgray;
+    width: 380px;
+    height: 190px;
+    border-radius: 15px; 
+    padding: 10px;
+}
+
+
+#card-cvc {
+    padding: 10px;
+}
