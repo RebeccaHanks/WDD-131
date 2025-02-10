@@ -10,7 +10,7 @@
 
 #front-card {
     /* border: 1px solid black; */
-    padding: 10px;
+    padding: 20px;
     background-color: lightgray;
     border-radius: 15px;
     width: 380px;
@@ -27,6 +27,19 @@
 p {
     margin: 1px 0;
 }
+#card-number {
+    width:140px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: start;
+}
+.cardNumber {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: end;
+}
+
+
 #card-holder {
     width: 140px;
     grid-column: 1/2;
@@ -48,6 +61,14 @@ p {
     grid-column: 2/3;
     grid-row: 3/4;
     align-self: start;
+}
+
+.total {
+    align-self: center;
+}
+img {
+    align-self: center;
+    justify-self: end;
 }
 
 /* Back card styling */
