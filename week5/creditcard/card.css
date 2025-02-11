@@ -101,7 +101,12 @@ img {
     border-radius: 15px; 
     padding: 10px;
 }
-
+.bar {
+    height: 50px;
+    background-color: rgb(89, 89, 89);
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
 
 #card-cvc {
     /* padding: 10px; */
@@ -111,4 +116,17 @@ img {
     grid-column: 2/3;
     grid-row: 2/3;
     align-self: center;
+}
+
+#submit {
+    position: absolute;
+    bottom: -50px; /* Moves button below the gray box */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: lightgray; 
+    color: black;
+    padding: 10px 20px;
+    border: solid 1px black;
+    border-radius: 5px;
+    cursor: pointer;
 }
