@@ -31,14 +31,13 @@ p {
     width:140px;
     grid-column: 1/2;
     grid-row: 2/3;
-    align-self: start;
+    align-self: end;
 }
 .cardNumber {
     grid-column: 1/2;
     grid-row: 2/3;
-    align-self: end;
+    align-self: start;
 }
-
 
 #card-holder {
     width: 140px;
@@ -51,12 +50,19 @@ p {
     grid-row: 3/4;
     align-self: start;
 }
-#card-exp {
+#card-M {
     width:25px;
     grid-column: 2/3;
     grid-row: 3/4;
     align-self: end;
 }
+#card-Y {
+    width:25px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: end;
+}
+
 .expiration {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -79,6 +85,9 @@ img {
     position: relative;
     transform: translate(20px, 20px); /* Offset to create overlapping effect */
     z-index: 1; /* Place below the front card */
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    grid-template-rows: 1fr 1fr;
 }
 
 /* Front card styling */
@@ -95,5 +104,11 @@ img {
 
 
 #card-cvc {
-    padding: 10px;
+    /* padding: 10px; */
+    width: 60px;
+}
+#cvc {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
 }
