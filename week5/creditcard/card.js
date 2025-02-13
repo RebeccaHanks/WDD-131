@@ -28,5 +28,27 @@ function submitHandler(event) {
 	return true
 }
 
-document.querySelector('#back-card').addEventListener('submit', submitHandler)
-document.querySelector('#front-card').addEventListener('submit', submitHandler)
+
+document.querySelector('#back-card').addEventListener('submit', submitHandler);
+document.querySelector('#front-card').addEventListener('submit', submitHandler);
+
+function validateDate() {
+    let inputYear = parseInt(document.getElementById("card-Y").value, 10);
+    let inputMonth = parseInt(document.getElementById("card-M").value, 10) - 1; // Convert to 0-based (Jan = 0)
+
+    if (isFutureDate(inputYear, inputMonth)) {
+        console.log("Valid: Date is in the future.");
+    } else {
+        console.log("Invalid: Date must be in the future.");
+    }
+}
+
+function isFutureDate(inputYear, inputMonth) {
+    let currentYear = new Date().getFullYear();
+    let currentMonth = new Date().getMonth(); // 0-based
+
+    return inputYear > currentYear || (inputYear === currentYear && inputMonth > currentMonth);
+}
+
+// Example: Call validateDate() when a button is clicked
+document.getElementById("submit-1").addEventListener("click", validateDate);
