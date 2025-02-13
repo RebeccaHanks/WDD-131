@@ -20,35 +20,99 @@ header > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;;
+    border-bottom: 1px solid #ccc;
+
 }
 #search {
     width: 300px;
     height: 25px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-img {
+.recipe img {
     max-width: 100%;
+    border-radius: 10px;
 }
 
+.recipe {
+    background: white;
+    width: 320px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
 
+.recipe h3 {
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+    border: 1px solid black;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
 
+.recipe h1 {
+    font-family: 'Cantata One', serif;
+    font-size: 22px;
+    color: #3498db;
+    text-transform: uppercase;
+    margin: 10px 0;
 
+}
+.recipe > p {
+    display: none;
 
+}
 
+.rating {
+    font-size: 18px;
+}
 
-
-
+footer {
+    font-size: 0.9em;
+    margin-top:20px;
+    text-align: center;
+}
 
 footer > a {
-    size: 0.6em;
+    color: #3498db;
+    text-decoration: none;
+
+}
+footer >a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;;
 }
 
 
-.social {
-    width: 30px;
-    height: 30px;
+.social img {
+    width: 50px;
+    height: 50px;
 }
 
