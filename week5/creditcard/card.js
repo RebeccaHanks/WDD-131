@@ -9,14 +9,14 @@ function displayError(msg) {
 function submitHandler(event) {
 	event.preventDefault()
 	let errorMsg = ''
-	console.log(this.cardNumber.value)
+	console.log(this.card-number.value)
 	// clear any previous errors
 	displayError('')
 	// check credit card number
-	if (isNaN(this.cardNumber.value)) {
+	if (isNaN(this.card-number.value)) {
 		// it is not a valid number
 		errorMsg += 'Card number is not a valid number\n'
-	} else if (!isCardNumberValid(this.cardNumber.value)) {
+	} else if (!isCardNumberValid(this.card-number.value)) {
 		// it is a number, but is it valid?
 		errorMsg += 'Card number is not a valid card number\n'
 	}
@@ -28,4 +28,5 @@ function submitHandler(event) {
 	return true
 }
 
-document.querySelector('#credit-card').addEventListener('submit', submitHandler)
+document.querySelector('#back-card').addEventListener('submit', submitHandler)
+document.querySelector('#front-card').addEventListener('submit', submitHandler)

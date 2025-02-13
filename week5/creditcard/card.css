@@ -130,3 +130,15 @@ img {
     border-radius: 5px;
     cursor: pointer;
 }
+#submit-1 {
+    position: absolute;
+    bottom: -50px; 
+    left: 25%;
+    transform: translateX(-50%);
+    background-color: lightgray; 
+    color: black;
+    padding: 10px 20px;
+    border: solid 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
