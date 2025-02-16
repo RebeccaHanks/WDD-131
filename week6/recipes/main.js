@@ -280,3 +280,69 @@ const recipes = [
 	}
 ]
 
+function randomNumber(num) {
+    return Math.floor(Math.random()*num);
+}
+
+function getRandomRecipe(list) {
+    const listLength = list.length;
+    const randomNum = randomNumber(listLength);
+    return list[randomNum];
+}
+
+console.log(getRandomRecipe(recipes));
+
+function recipeTemplate(recipe) {
+    return 
+    `<section class="recipe">
+            <img src="${recipes.image}" alt="Chocolate Chip Cookies">
+            <div class="recipe-content">
+            <ul class="recipe__tags">
+                <li>${recipes.tags}</li>
+            </ul>
+            <h1>${recipes.name}</h1>
+            <span
+	            class="rating"
+	            role="img"
+	            aria-label="Rating: 4 out of 5 stars"
+            >
+	            <span aria-hidden="true" class="icon-star">⭐</span>
+	            <span aria-hidden="true" class="icon-star">⭐</span>
+	            <span aria-hidden="true" class="icon-star">⭐</span>
+	            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+	            <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <p>${recipes.description}</p>
+        </div>
+        </section>
+    `
+}
+
+function tagsTemplate(tags) {
+	// loop through the tags list and transform the strings to HTML
+
+	return html;
+}
+
+function ratingTemplate(rating) {
+	// begin building an html string using the ratings HTML written earlier as a model.
+	let html = `<span
+	class="rating"
+	role="img"
+	aria-label="Rating: ${rating} out of 5 stars"
+>`
+// our ratings are always out of 5, so create a for loop from 1 to 5
+
+		// check to see if the current index of the loop is less than our rating
+		// if so then output a filled star
+
+		// else output an empty star
+
+	// after the loop, add the closing tag to our string
+	html += `</span>`
+	// return the html string
+	return html
+}
+
+const recipe = getRandomRecipe(recipes);
+console.log(recipeTemplate(recipe));
