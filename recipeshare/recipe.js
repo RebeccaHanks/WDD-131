@@ -18,6 +18,10 @@ const recipes = [
             'Sift flour, baking powder, sugar, and salt together in a large bowl. Make a well in the center and add milk, melted butter, and egg; mix until smooth.',
             'Heat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes. Flip and cook until browned on the other side. Repeat with remaining batter.'
         ],
+        extraTitle1: 'Can You Save Pancake Batter?',
+        extraInfo1: 'Do not let leftover pancake batter go to waste! Store the batter in an airtight container in the fridge for up to two days. If you plan to keep it longer than that, it is best to freeze the batter.',
+        extraTitle2: 'Can You Freeze Pancakes?',
+        extraInfo2: 'Allow the pancakes to cool completely, then arrange them in a single layer on a baking sheet (make sure the edges are not touching). Flash freeze for a few hours or up to overnight. Reheat in an oven set to 350 degrees F until warmed through.',
     },
     {
         name: 'Mac and Cheese',
@@ -42,6 +46,11 @@ const recipes = [
             'Combine: Add the cooked macaroni noodles and toss to coat. Pour half or the pasta mixture into the prepared baking dish. Sprinkle ½ cup cheese over the top. Add remaining pasta and sprinkle with remaining cheese.',
             'Bake for 15-20 minutes or until cheese is melted on top.'
         ],
+        extraTitle1: 'What Type of Cheese?',
+        extraInfo1: 'This classic mac and cheese recipe is made with cheddar cheese.  I particularly love medium or sharp cheddar cheese but any type will do.  If you want a more luxurious mac and cheese or you’re really trying to impress a crowd, you could use a combination of different cheeses.  Just be sure to select a type of cheese that is good for melting, like white cheddar, smoked gouda, gruyere, brie, goat cheese, mozzarella, or fontina.',
+        extraTitle2: 'Freezing and Storing',
+        extraInfo2: 'This recipe freezes well.  Just like with my other freezer friendly meals, I love to prepare two and freeze one for another day.  You’ll want to freeze this dish prior to baking it in the oven!  Make sure to let the mac and cheese cool completely then pour it into a freezer friendly dish, cover it well and freeze if for up to 3 months.',
+
     },
     {
         name: 'Homemade Pasta',
@@ -61,6 +70,11 @@ const recipes = [
             'Dust 2 large baking sheets with flour and set aside.',
             'Slice the dough into four pieces. Gently flatten one into an oval disk. Run the dough through the Pasta Roller Attachment or a pasta maker three times on level 1 (the widest setting).'
         ],
+        extraTitle1: 'What Flour Should I use?',
+        extraInfo1: 'In the past, I thought you needed 00 flour or semolina flour to make great fresh pasta, but this homemade pasta recipe proved me wrong. In it, regular all-purpose flour yields chewy, bouncy noodles every time.',
+        extraTitle2: 'Homemade Pasta Serving Suggestions',
+        extraInfo2: 'If you have never had fresh pasta before, you’re in for a treat! Its chewy, bouncy texture and rich flavor make it so much better than the dried pasta at the store. In fact, these noodles are so good that we usually serve them really simply.',
+
     }
 ]
 
@@ -70,6 +84,10 @@ function showRecipes(){
 		const recipeElement = document.createElement("recipe");
 
 		const recipeHTML = `
+        <section class="recipe-extra">
+            <h3>${recipes.extraTitle1}</h3>
+            <p>${recipes.extraInfo1}</p>
+        </section>
         <div class="recipe-content">
             <h1>${recipes.name}</h1>
             <img src="${recipes.image}" alt="${recipes.alt}">
@@ -89,6 +107,10 @@ function showRecipes(){
                 <ol>Heat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes. Flip and cook until browned on the other side. Repeat with remaining batter.</ol>   
             </ul>
         </div>
+        <section class="recipe-extra-2">
+            <h3>${recipes.extraTitle2}</h3>
+            <p>${recipes.extraInfo2}</p>
+        </section>
 
 		`
 recipeElement.innerHTML = recipeHTML;
@@ -99,3 +121,4 @@ recipeContainer.appendChild(recipeElement);
 	})
 
 }
+
