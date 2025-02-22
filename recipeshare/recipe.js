@@ -80,36 +80,29 @@ const recipes = [
 
 function showRecipes(){
 	const recipeContainer = document.querySelector('.recipe-content');
-	articles.forEach((recipe) => {
-		const recipeElement = document.createElement("recipe");
+	recipes.forEach((recipe) => {
+		const recipeElement = document.createElement("article");
+
+        const ingredientHTML = recipe.ingredientList.map(ingredient => `<li>${ingredient}</li>`).join('');
+
+        const directionsHTML = recipe.directions.map(step => `<li>${step}</li>`).join('');
 
 		const recipeHTML = `
         <section class="recipe-extra">
-            <h3>${recipes.extraTitle1}</h3>
-            <p>${recipes.extraInfo1}</p>
+            <h3>${recipe.extraTitle1}</h3>
+            <p>${recipe.extraInfo1}</p>
         </section>
         <div class="recipe-content">
-            <h1>${recipes.name}</h1>
-            <img src="${recipes.image}" alt="${recipes.alt}">
-            <h2>${recipes.ingredientTitle}</h2>
-            <ul class="ingredients">
-                <li>1 ½ cups all-purpose flour</li>
-                <li>3 ½ teaspoons baking powder</li>
-                <li>1 tablespoon white sugar</li>
-                <li>¼ teaspoon salt, or more to taste</li>
-                <li>1 ¼ cups milk</li>
-                <li>3 tablespoons butter, melted</li>
-                <li>1 large egg</li>
-            </ul>
-            <h2>${recipes.directionsTitle}</h2>
-            <ul class="directions">
-                <ol>Sift flour, baking powder, sugar, and salt together in a large bowl. Make a well in the center and add milk, melted butter, and egg; mix until smooth.</ol>
-                <ol>Heat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes. Flip and cook until browned on the other side. Repeat with remaining batter.</ol>   
-            </ul>
+            <h1>${recipe.name}</h1>
+            <img src="${recipe.image}" alt="${recipe.alt}">
+            <h2>${recipe.ingredientTitle}</h2>
+            <ul class="ingredients">${ingredientHTML}</ul>
+            <h2>${recipe.directionsTitle}</h2>
+            <ol class="directions">${directionsHTML}</ol>
         </div>
         <section class="recipe-extra-2">
-            <h3>${recipes.extraTitle2}</h3>
-            <p>${recipes.extraInfo2}</p>
+            <h3>${recipe.extraTitle2}</h3>
+            <p>${recipe.extraInfo2}</p>
         </section>
 
 		`
@@ -121,4 +114,6 @@ recipeContainer.appendChild(recipeElement);
 	})
 
 }
+
+showRecipes();
 
